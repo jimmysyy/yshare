@@ -1,0 +1,188 @@
+{
+  "_注释": {
+    "说明": "修改此文件即可更新网页内容，保存后刷新页面即生效",
+    "hidden字段": "true = 默认折叠（需点显示更多才可见），false 或不写 = 默认展示",
+    "links字段": "不需要的链接填 null，将显示为灰色'暂无'按钮",
+    "color字段": "徽章颜色可选值: blue（默认）/ green / orange / red",
+    "tabs顺序": "tabs 数组的顺序决定导航栏 Tab 的排列顺序"
+  },
+
+  "site": {
+    "title":    "资源分享仓库",
+    "subtitle": "精心整理的优质资源，持续更新中",
+    "tip":      "解压密码一般为 <strong>yjimmy.cn</strong>，本站仅分享合集内容，更多资源进群查看。"
+  },
+
+  "tabs": [
+
+    {
+      "key":   "books",
+      "label": "📚 图书",
+      "sections": [
+        {
+          "title": "🕒 最近更新",
+          "color": "blue",
+          "items": [
+            {
+              "name":  "2024豆瓣十佳图书",
+              "desc":  "豆瓣2024年度评选的十佳图书合集，涵盖文学、历史、社科等多个领域。",
+              "links": { "baidu": "#", "quark": "#", "other": "#" },
+              "date":  "2025-06-22",
+              "hidden": false
+            },
+            {
+              "name":  "2023豆瓣十佳图书",
+              "desc":  "豆瓣2023年度十佳图书精选合集，多种格式可选。",
+              "links": { "baidu": "#", "quark": "#", "other": "#" },
+              "date":  "2025-06-21",
+              "hidden": false
+            },
+            {
+              "name":  "2022豆瓣十佳图书",
+              "desc":  "2022年度豆瓣评选结果合集。",
+              "links": { "baidu": "#", "quark": "#", "other": "#" },
+              "date":  "2025-06-20",
+              "hidden": true
+            },
+            {
+              "name":  "2021豆瓣十佳图书",
+              "desc":  "2021年度豆瓣评选结果合集。",
+              "links": { "baidu": "#", "quark": null, "other": null },
+              "date":  "2025-06-19",
+              "hidden": true
+            }
+          ]
+        },
+        {
+          "title": "📚 图书",
+          "color": "green",
+          "items": [
+            {
+              "name":  "余华精选集",
+              "desc":  "余华代表作品：《活着》《许三观卖血记》《兄弟》等，epub 格式。",
+              "links": { "baidu": "#", "quark": "#", "other": null },
+              "date":  "2025-05-10",
+              "hidden": false
+            },
+            {
+              "name":  "刘慈欣科幻合集",
+              "desc":  "三体系列及刘慈欣其他科幻短篇全集，epub + pdf 双格式。",
+              "links": { "baidu": "#", "quark": "#", "other": "#" },
+              "date":  "2025-04-18",
+              "hidden": false
+            },
+            {
+              "name":  "莫言作品全集",
+              "desc":  "诺贝尔文学奖得主莫言代表作合集，含《红高粱家族》《蛙》《檀香刑》等。",
+              "links": { "baidu": "#", "quark": "#", "other": null },
+              "date":  "2025-03-05",
+              "hidden": true
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "key":   "films",
+      "label": "🎬 影视",
+      "sections": [
+        {
+          "title": "🕒 最近更新",
+          "color": "blue",
+          "items": [
+            {
+              "name":  "2024豆瓣Top100电影",
+              "desc":  "2024年豆瓣电影Top100合集，1080P高清版本。",
+              "links": { "baidu": "#", "quark": "#", "other": "#" },
+              "date":  "2025-06-22",
+              "hidden": false
+            },
+            {
+              "name":  "宫崎骏动画全集",
+              "desc":  "吉卜力工作室全系列动画，4K修复版，国配+日配双版本。",
+              "links": { "baidu": "#", "quark": "#", "other": null },
+              "date":  "2025-06-15",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "title": "🎬 影视剧",
+          "color": "orange",
+          "items": [
+            {
+              "name":  "权力的游戏 全季",
+              "desc":  "权力的游戏 1-8 季完整版，1080P蓝光，内嵌中文字幕。",
+              "links": { "baidu": "#", "quark": "#", "other": "#" },
+              "date":  "2025-05-30",
+              "hidden": false
+            },
+            {
+              "name":  "黑镜 全季",
+              "desc":  "BBC 科幻剧 Black Mirror 全季合集，中英双字幕。",
+              "links": { "baidu": "#", "quark": "#", "other": null },
+              "date":  "2025-04-12",
+              "hidden": true
+            },
+            {
+              "name":  "绝命毒师 全季",
+              "desc":  "Breaking Bad 全季合集，1080P高清，内嵌中文字幕。",
+              "links": { "baidu": "#", "quark": "#", "other": null },
+              "date":  "2025-03-20",
+              "hidden": true
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "key":   "apps",
+      "label": "💿 软件",
+      "sections": [
+        {
+          "title": "🕒 最近更新",
+          "color": "blue",
+          "items": [
+            {
+              "name":  "Adobe CC 2025 全家桶",
+              "desc":  "Adobe Creative Cloud 2025 全系列安装包，含 PS、AI、PR、AE 等，支持 Win/Mac。",
+              "links": { "baidu": "#", "quark": "#", "other": "#" },
+              "date":  "2025-06-20",
+              "hidden": false
+            },
+            {
+              "name":  "Office 2024 专业版",
+              "desc":  "Microsoft Office 2024 专业增强版，含激活工具，Win 专用。",
+              "links": { "baidu": "#", "quark": "#", "other": null },
+              "date":  "2025-06-18",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "title": "💿 效率工具",
+          "color": "red",
+          "items": [
+            {
+              "name":  "Notion 离线版",
+              "desc":  "Notion 桌面版 + 破解补丁，支持 Win/Mac，无需联网使用基础功能。",
+              "links": { "baidu": "#", "quark": "#", "other": "#" },
+              "date":  "2025-05-05",
+              "hidden": false
+            },
+            {
+              "name":  "Obsidian 插件合集",
+              "desc":  "精选 50+ 款 Obsidian 常用插件打包，含安装说明文档。",
+              "links": { "baidu": "#", "quark": null, "other": null },
+              "date":  "2025-04-20",
+              "hidden": true
+            }
+          ]
+        }
+      ]
+    }
+
+  ]
+}

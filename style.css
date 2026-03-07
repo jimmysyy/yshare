@@ -1,0 +1,403 @@
+:root {
+  /* 主题色 */
+  --accent:      #007AFF;   /* 蓝色主题色（按钮、链接、激活态） */
+  --accent-soft: #e8f2ff;   /* 主题色浅背景（提示横幅、链接按钮底色） */
+  --green:       #34C759;   /* 绿色（图书板块徽章） */
+  --orange:      #FF9500;   /* 橙色（影视板块徽章） */
+  --red:         #FF3B30;   /* 红色（软件板块徽章） */
+
+  /* 背景 & 表面 */
+  --bg:          #f5f5f7;   /* 页面底色（浅灰） */
+  --surface:     #ffffff;   /* 卡片/导航白色背景 */
+  --surface-2:   #f2f2f7;   /* 次级背景（表头、hover 行、Tab 底色） */
+  --border:      rgba(0,0,0,.08); /* 通用边框色（半透明黑） */
+
+  /* 文字 */
+  --text-primary:   #1d1d1f; /* 主文字（深灰近黑） */
+  --text-secondary: #6e6e73; /* 次要文字（中灰，用于描述/日期） */
+  --text-link:      #007AFF; /* 链接文字色 */
+
+  /* 圆角 */
+  --radius-sm:  8px;   /* 小圆角（链接按钮） */
+  --radius-md: 14px;   /* 中圆角（提示横幅） */
+  --radius-lg: 20px;   /* 大圆角（表格卡片） */
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);  /* 轻阴影（激活 Tab） */
+  --shadow-md: 0 4px 16px rgba(0,0,0,.08), 0 1px 4px rgba(0,0,0,.04); /* 卡片阴影 */
+
+  /* 字体：Apple 系统字体栈，在各平台自动使用最佳中文字体 */
+  --font: -apple-system, "SF Pro SC", "SF Pro Text", "PingFang SC",
+          "Helvetica Neue", Arial, sans-serif;
+}
+
+
+/* ----------------------------------------------------------------
+   2. Reset & 基础样式
+---------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box; /* 让 padding/border 不撑大元素宽度 */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* 点击锚点时平滑滚动 */
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased; /* macOS 字体抗锯齿 */
+  min-height: 100vh;
+}
+
+
+/* ----------------------------------------------------------------
+   3. 顶部导航栏
+   - position: sticky 让导航栏跟随滚动粘在顶部
+   - backdrop-filter 实现毛玻璃效果（Safari 需 -webkit- 前缀）
+---------------------------------------------------------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100; /* 确保始终在内容层上方 */
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  background: rgba(245,245,247,.85); /* 半透明，配合毛玻璃 */
+  border-bottom: 1px solid var(--border);
+}
+
+/* 导航内容区：限制最大宽度并水平居中 */
+.navbar-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* 左侧站点名称 */
+.navbar-brand {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  color: var(--text-primary);
+  white-space: nowrap; /* 防止换行 */
+}
+
+/* Tab 切换组容器 */
+.tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--surface-2); /* 灰色底盘 */
+  border-radius: 10px;
+  padding: 3px;
+}
+
+/* 单个 Tab 按钮（默认状态：透明底，灰色字） */
+.tab-btn {
+  border: none;
+  background: transparent;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  color: var(--text-primary); /* hover 时文字变深 */
+}
+
+/* 激活的 Tab（白底 + 阴影，模拟 iOS 选择器风格） */
+.tab-btn.active {
+  background: var(--surface);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* ----------------------------------------------------------------
+   4. 主体区域 & 页面标题
+---------------------------------------------------------------- */
+.main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 20px 60px; /* 上 右/左 下 */
+}
+
+/* 主标题：使用 clamp() 实现响应式字号（最小24px，最大34px） */
+.page-title {
+  text-align: center;
+  font-size: clamp(24px, 4vw, 34px);
+  font-weight: 700;
+  letter-spacing: -.03em;
+  margin-bottom: 8px;
+}
+
+/* 副标题 */
+.page-subtitle {
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+}
+
+
+/* ----------------------------------------------------------------
+   5. 提示横幅
+   如需修改提示内容，请到 index.html 的 .tip-banner 区域编辑文字
+---------------------------------------------------------------- */
+.tip-banner {
+  background: var(--accent-soft);
+  border: 1px solid rgba(0,122,255,.15);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  font-size: 14px;
+  color: #0055cc;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.6;
+}
+
+/* 图标（SVG）不随文字折叠 */
+.tip-banner svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+
+/* ----------------------------------------------------------------
+   6. 板块面板（Panel）
+   - 默认全部隐藏（display:none）
+   - JS 给当前选中面板加 .active 后才显示
+---------------------------------------------------------------- */
+.panel        { display: none;  }
+.panel.active { display: block; }
+
+/* 各分区间距 */
+.section { margin-bottom: 32px; }
+
+/* 分区标题行 */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+
+/* ----------------------------------------------------------------
+   7. 分区徽章（section-badge）
+   - 默认蓝色；用 .green .orange .red 修饰色彩
+   - 在 HTML 中给 <span class="section-badge 颜色类"> 加不同颜色
+---------------------------------------------------------------- */
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent); /* 默认蓝 */
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px; /* 胶囊形 */
+}
+
+.section-badge.green  { background: var(--green);  }
+.section-badge.orange { background: var(--orange); }
+.section-badge.red    { background: var(--red);    }
+
+
+/* ----------------------------------------------------------------
+   8. 资源表格卡片
+---------------------------------------------------------------- */
+
+/* 外层白色圆角卡片 */
+.table-card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden; /* 保证内部元素不溢出圆角 */
+}
+
+/* 表格铺满卡片宽度，合并相邻边框 */
+.resource-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* 表头行：灰色背景 */
+.resource-table thead tr {
+  background: var(--surface-2);
+}
+
+/* 表头单元格：小号大写英文标签风格 */
+.resource-table th {
+  padding: 11px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: left;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
+/* 数据行：顶部分隔线 + hover 高亮 */
+.resource-table tbody tr {
+  border-top: 1px solid var(--border);
+  transition: background .15s;
+}
+
+.resource-table tbody tr:hover {
+  background: var(--surface-2);
+}
+
+/* 数据单元格 */
+.resource-table td {
+  padding: 13px 16px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+/* 名称列：加粗，防止过窄 */
+.col-name {
+  font-weight: 500;
+  min-width: 140px;
+}
+
+/* 日期列：小字灰色，不换行 */
+.col-date {
+  font-size: 13px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* ---- 描述展开按钮 ---- */
+.desc-toggle {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/* 展开时箭头旋转 90° */
+.desc-arrow {
+  display: inline-block;
+  transition: transform .2s;
+}
+
+.desc-toggle.open .desc-arrow {
+  transform: rotate(90deg);
+}
+
+/* 描述文本：默认隐藏，由 JS 控制 display */
+.desc-text {
+  display: none;
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+
+/* ----------------------------------------------------------------
+   9. 链接按钮
+   - .link-btn      正常可点击链接（蓝色浅底，hover 变实色）
+   - .link-btn.disabled  暂无链接（灰色，不可点击）
+---------------------------------------------------------------- */
+.link-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all .15s;
+  white-space: nowrap;
+}
+
+/* hover：蓝底白字 */
+.link-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* 禁用态：灰底灰字，不触发鼠标事件 */
+.link-btn.disabled {
+  background: var(--surface-2);
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+
+/* ----------------------------------------------------------------
+   10. "显示更多" 按钮区域
+---------------------------------------------------------------- */
+.show-more-wrap {
+  text-align: center;
+  padding: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.show-more-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 9px 24px;
+  border-radius: 20px;   /* 胶囊形 */
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity .15s, transform .15s;
+}
+
+.show-more-btn:hover {
+  opacity: .85;
+  transform: scale(.98); /* 轻微缩小，增加点击感 */
+}
+
+/* 默认隐藏的行（被"显示更多"按钮控制） */
+tr.hidden-row           { display: none; }
+tr.hidden-row.revealed  { display: table-row; } /* JS 加 .revealed 后显示 */
+
+
+/* ----------------------------------------------------------------
+   11. 响应式适配
+   - 所有屏幕宽度均完整展示三个下载链接按钮
+   - 链接按钮在空间不足时自动换行（flex-wrap: wrap 已在 .link-group 设置）
+   - 窄屏仅缩小导航字号，不再隐藏任何列
+---------------------------------------------------------------- */
+@media (max-width: 680px) {
+  .navbar-brand { font-size: 15px; }
+  .tab-btn      { padding: 6px 10px; font-size: 13px; }
+  /* 表格卡片在小屏可横向滚动（防止极端情况溢出） */
+  .table-card   { border-radius: var(--radius-md); overflow-x: auto; }
+}
