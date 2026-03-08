@@ -1,0 +1,19 @@
+# macOS 系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 如果你想忽略 .gitignore 本身（不推荐，除非特殊需求）
+# .gitignore
+
+# 其他常见忽略项（可选，根据你的项目补充）
+node_modules/  # Node.js 依赖
+dist/          # 打包产物
+build/         # 构建目录
+*.log          # 日志文件
+.idea/         # IDE 配置
+.vscode/       # VS Code 配置

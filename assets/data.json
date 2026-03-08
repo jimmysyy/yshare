@@ -8,9 +8,9 @@
   },
 
   "site": {
-    "title":    "资源分享仓库",
+    "title":    "🐑的资源仓库",
     "subtitle": "精心整理的优质资源，持续更新中",
-    "tip":      "解压密码一般为 <strong>yjimmy.cn</strong>，本站仅分享合集内容，更多资源进群查看。"
+    "tip":      "无特别说明则解压密码一般为 <strong>yjimmy.cn</strong>，本站仅分享收藏合集，更多资源可进群查看。"
   },
 
   "tabs": [
@@ -24,31 +24,24 @@
           "color": "blue",
           "items": [
             {
-              "name":  "2024豆瓣十佳图书",
-              "desc":  "豆瓣2024年度评选的十佳图书合集，涵盖文学、历史、社科等多个领域。",
-              "links": { "baidu": "#", "quark": "#", "other": "#" },
-              "date":  "2025-06-22",
-              "hidden": false
-            },
-            {
               "name":  "2023豆瓣十佳图书",
               "desc":  "豆瓣2023年度十佳图书精选合集，多种格式可选。",
-              "links": { "baidu": "#", "quark": "#", "other": "#" },
-              "date":  "2025-06-21",
+              "links": { "baidu": null, "quark": "https://pan.quark.cn/s/c96f128dab31", "other": null },
+              "date":  "2026-03-08",
               "hidden": false
             },
             {
               "name":  "2022豆瓣十佳图书",
               "desc":  "2022年度豆瓣评选结果合集。",
-              "links": { "baidu": "#", "quark": "#", "other": "#" },
-              "date":  "2025-06-20",
-              "hidden": true
+              "links": { "baidu": null, "quark": "https://pan.quark.cn/s/42bd9557dade", "other": null },
+              "date":  "2026-02-14",
+              "hidden": false
             },
             {
-              "name":  "2021豆瓣十佳图书",
-              "desc":  "2021年度豆瓣评选结果合集。",
-              "links": { "baidu": "#", "quark": null, "other": null },
-              "date":  "2025-06-19",
+              "name":  "豆瓣最佳历史书合集",
+              "desc":  "豆瓣历史类书籍评分排行榜合集，包含多部经典历史著作。",
+              "links": { "baidu": null, "quark": "https://pan.quark.cn/s/2c6f72f7aed9", "other": null },
+              "date":  "2026-01-19",
               "hidden": true
             }
           ]
@@ -76,6 +69,26 @@
               "desc":  "诺贝尔文学奖得主莫言代表作合集，含《红高粱家族》《蛙》《檀香刑》等。",
               "links": { "baidu": "#", "quark": "#", "other": null },
               "date":  "2025-03-05",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "title": "💥 漫画",
+          "color": "orange",
+          "items": [
+            {
+              "name":  "五等分的新娘 全集",
+              "desc":  "五等分的新娘漫画全集，包含所有章节和番外篇。",
+              "links": { "baidu": "https://pan.baidu.com/s/1S-q0ZFcTKjavI4-NRJGWVA?pwd=jqp5", "quark": null, "other": null },
+              "date":  "2025-02-20",
+              "hidden": false
+            },
+            {
+              "name":  "数据科学实战指南",
+              "desc":  "全面的数据科学实战指南，涵盖数据清洗、分析、可视化等内容。",
+              "links": { "baidu": "#", "quark": "#", "other": "#" },
+              "date":  "2025-01-15",
               "hidden": true
             }
           ]
