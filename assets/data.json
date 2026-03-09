@@ -83,13 +83,6 @@
               "links": { "baidu": "https://pan.baidu.com/s/1S-q0ZFcTKjavI4-NRJGWVA?pwd=jqp5", "quark": null, "other": null },
               "date":  "2025-02-20",
               "hidden": false
-            },
-            {
-              "name":  "数据科学实战指南",
-              "desc":  "全面的数据科学实战指南，涵盖数据清洗、分析、可视化等内容。",
-              "links": { "baidu": "#", "quark": "#", "other": "#" },
-              "date":  "2025-01-15",
-              "hidden": true
             }
           ]
         }
@@ -101,14 +94,14 @@
       "label": "🎬 影视",
       "sections": [
         {
-          "title": "🕒 最近更新",
+          "title": "📺 电视剧",
           "color": "blue",
           "items": [
             {
-              "name":  "2024豆瓣Top100电影",
-              "desc":  "2024年豆瓣电影Top100合集，1080P高清版本。",
-              "links": { "baidu": "#", "quark": "#", "other": "#" },
-              "date":  "2025-06-22",
+              "name":  "绝命毒师 全季",
+              "desc":  "Breaking Bad 全季合集，1080P高清，内嵌中文字幕。",
+              "links": { "baidu": "#", "quark": "#", "other": null },
+              "date":  "2025-03-20",
               "hidden": false
             },
             {
@@ -121,28 +114,21 @@
           ]
         },
         {
-          "title": "🎬 影视剧",
+          "title": "🎬 电影",
           "color": "orange",
           "items": [
             {
-              "name":  "权力的游戏 全季",
-              "desc":  "权力的游戏 1-8 季完整版，1080P蓝光，内嵌中文字幕。",
-              "links": { "baidu": "#", "quark": "#", "other": "#" },
+              "name":  "林正英电影合集46部",
+              "desc":  "林正英主演的46部经典电影合集，1080P高清版本，内嵌中文字幕。",
+              "links": { "baidu": null, "quark": "https://pan.quark.cn/s/a5be6bfb1061", "other": null },
               "date":  "2025-05-30",
               "hidden": false
             },
             {
-              "name":  "黑镜 全季",
-              "desc":  "BBC 科幻剧 Black Mirror 全季合集，中英双字幕。",
-              "links": { "baidu": "#", "quark": "#", "other": null },
+              "name":  "月光光心慌慌系列13部合集",
+              "desc":  "经典恐怖电影-月光光心慌慌（Halloween）系列13部电影合集，1080P高清版本，内嵌中文字幕。",
+              "links": { "baidu": null, "quark": "https://pan.quark.cn/s/6b38bbf19793", "other": null },
               "date":  "2025-04-12",
-              "hidden": true
-            },
-            {
-              "name":  "绝命毒师 全季",
-              "desc":  "Breaking Bad 全季合集，1080P高清，内嵌中文字幕。",
-              "links": { "baidu": "#", "quark": "#", "other": null },
-              "date":  "2025-03-20",
               "hidden": true
             }
           ]
@@ -155,8 +141,21 @@
       "label": "💿 软件",
       "sections": [
         {
-          "title": "🕒 最近更新",
+          "title": "📱 手机软件",
           "color": "blue",
+          "items": [
+            {
+              "name":  "在线影视app合集",
+              "desc":  "多款热门在线影视app安装包，和谐快建议用最近更新的版本。",
+              "links": { "baidu": "#", "quark": "#", "other": null },
+              "date":  "2025-06-18",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "title": "💻 电脑软件",
+          "color": "red",
           "items": [
             {
               "name":  "Adobe CC 2025 全家桶",
@@ -165,19 +164,6 @@
               "date":  "2025-06-20",
               "hidden": false
             },
-            {
-              "name":  "Office 2024 专业版",
-              "desc":  "Microsoft Office 2024 专业增强版，含激活工具，Win 专用。",
-              "links": { "baidu": "#", "quark": "#", "other": null },
-              "date":  "2025-06-18",
-              "hidden": false
-            }
-          ]
-        },
-        {
-          "title": "💿 效率工具",
-          "color": "red",
-          "items": [
             {
               "name":  "Notion 离线版",
               "desc":  "Notion 桌面版 + 破解补丁，支持 Win/Mac，无需联网使用基础功能。",
