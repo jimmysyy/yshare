@@ -8,21 +8,67 @@
   },
 
   "site": {
-    "title":    "🐑的资源仓库",
+    "title":    "Jimmy的资源仓库",
     "subtitle": "精心整理的优质资源，持续更新中",
-    "tip":      "无特别说明则解压密码一般为 <strong>yjimmy.cn</strong>，本站仅分享收藏合集，更多资源可进群查看。"
+    "tip":      "无特别说明则解压密码一般为 <strong>jmnav.top</strong>，若对你有帮助，请收藏分享给更多人！。"
   },
 
   "tabs": [
+    {
+      "key":   "apps",
+      "label": "💿 软件",
+      "sections": [
+        {
+          "title": "📱 手机软件",
+          "color": "blue",
+          "items": [
+            {
+              "name":  "在线影视app合集",
+              "desc":  "多款热门在线影视app安装包，和谐快建议用最近更新的版本。",
+              "links": { "baidu": "https://pan.baidu.com/s/12icN2rEVIKR0BMDdCKIBvA?pwd=21km", "quark": "https://pan.quark.cn/s/c59cd99f5f56", "other": null },
+              "date":  "2026-04-18",
+              "hidden": false
+            },
+            {
+              "name":  "动漫漫画app合集",
+              "desc":  "多款热门动漫漫画app安装包，破解免广告。",
+              "links": { "baidu": "https://pan.baidu.com/s/1-_yTX93yhtZDkS__SweRYw?pwd=yc8c", "quark": null, "other": null },
+              "date":  "2026-04-25",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "title": "💻 电脑软件",
+          "color": "red",
+          "items": [
+            {
+              "name":  "Adobe 2024 全家桶",
+              "desc":  "Adobe 2024 全系列全家桶快速安装包，含 PS、AI、PR、AE 等，支持 Win。",
+              "links": { "baidu": null, "quark": "https://pan.quark.cn/s/8d52e472c46f", "other": null },
+              "date":  "2026-02-20",
+              "hidden": false
+            }
+          ]
+        }
+      ]
+    },
 
     {
       "key":   "books",
       "label": "📚 图书",
       "sections": [
         {
-          "title": "🕒 最近更新",
-          "color": "blue",
+          "title": "📚 图书",
+          "color": "green",
           "items": [
+            {
+              "name":  "一万多本小说合集",
+              "desc":  "126000多本小说合集，涵盖各种类型和题材，转存获得更新",
+              "links": { "baidu": null, "quark": "https://pan.quark.cn/s/5c62a25c9512", "other": null },
+              "date":  "2026-04-01",
+              "hidden": false
+            },
             {
               "name":  "2023豆瓣十佳图书",
               "desc":  "豆瓣2023年度十佳图书精选合集，多种格式可选。",
@@ -33,7 +79,7 @@
             {
               "name":  "2022豆瓣十佳图书",
               "desc":  "2022年度豆瓣评选结果合集。",
-              "links": { "baidu": null, "quark": "https://pan.quark.cn/s/42bd9557dade", "other": null },
+             "links": { "baidu": null, "quark": "https://pan.quark.cn/s/42bd9557dade", "other": null },
               "date":  "2026-02-14",
               "hidden": false
             },
@@ -47,36 +93,16 @@
           ]
         },
         {
-          "title": "📚 图书",
-          "color": "green",
-          "items": [
-            {
-              "name":  "余华精选集",
-              "desc":  "余华代表作品：《活着》《许三观卖血记》《兄弟》等，epub 格式。",
-              "links": { "baidu": "#", "quark": "#", "other": null },
-              "date":  "2025-05-10",
-              "hidden": false
-            },
-            {
-              "name":  "刘慈欣科幻合集",
-              "desc":  "三体系列及刘慈欣其他科幻短篇全集，epub + pdf 双格式。",
-              "links": { "baidu": "#", "quark": "#", "other": "#" },
-              "date":  "2025-04-18",
-              "hidden": false
-            },
-            {
-              "name":  "莫言作品全集",
-              "desc":  "诺贝尔文学奖得主莫言代表作合集，含《红高粱家族》《蛙》《檀香刑》等。",
-              "links": { "baidu": "#", "quark": "#", "other": null },
-              "date":  "2025-03-05",
-              "hidden": false
-            }
-          ]
-        },
-        {
           "title": "💥 漫画",
           "color": "orange",
           "items": [
+            {
+              "name":  "知名日漫合集",
+              "desc":  "值得收藏的多部知名日漫漫画合集，包括一些小众作品。",
+              "links": { "baidu": "https://pan.baidu.com/s/1-FCxiPvNBSUxj60dguocuQ?pwd=5nbv", "quark": null, "other": null },
+              "date":  "2026-04-12",
+              "hidden": false
+            },
             {
               "name":  "五等分的新娘 全集",
               "desc":  "五等分的新娘漫画全集，包含所有章节和番外篇。",
@@ -84,6 +110,7 @@
               "date":  "2025-02-20",
               "hidden": false
             }
+            
           ]
         }
       ]
@@ -97,20 +124,6 @@
           "title": "📺 电视剧",
           "color": "blue",
           "items": [
-            {
-              "name":  "绝命毒师 全季",
-              "desc":  "Breaking Bad 全季合集，1080P高清，内嵌中文字幕。",
-              "links": { "baidu": "#", "quark": "#", "other": null },
-              "date":  "2025-03-20",
-              "hidden": false
-            },
-            {
-              "name":  "宫崎骏动画全集",
-              "desc":  "吉卜力工作室全系列动画，4K修复版，国配+日配双版本。",
-              "links": { "baidu": "#", "quark": "#", "other": null },
-              "date":  "2025-06-15",
-              "hidden": false
-            }
           ]
         },
         {
@@ -134,54 +147,9 @@
           ]
         }
       ]
-    },
-
-    {
-      "key":   "apps",
-      "label": "💿 软件",
-      "sections": [
-        {
-          "title": "📱 手机软件",
-          "color": "blue",
-          "items": [
-            {
-              "name":  "在线影视app合集",
-              "desc":  "多款热门在线影视app安装包，和谐快建议用最近更新的版本。",
-              "links": { "baidu": "#", "quark": "#", "other": null },
-              "date":  "2025-06-18",
-              "hidden": false
-            }
-          ]
-        },
-        {
-          "title": "💻 电脑软件",
-          "color": "red",
-          "items": [
-            {
-              "name":  "Adobe CC 2025 全家桶",
-              "desc":  "Adobe Creative Cloud 2025 全系列安装包，含 PS、AI、PR、AE 等，支持 Win/Mac。",
-              "links": { "baidu": "#", "quark": "#", "other": "#" },
-              "date":  "2025-06-20",
-              "hidden": false
-            },
-            {
-              "name":  "Notion 离线版",
-              "desc":  "Notion 桌面版 + 破解补丁，支持 Win/Mac，无需联网使用基础功能。",
-              "links": { "baidu": "#", "quark": "#", "other": "#" },
-              "date":  "2025-05-05",
-              "hidden": false
-            },
-            {
-              "name":  "Obsidian 插件合集",
-              "desc":  "精选 50+ 款 Obsidian 常用插件打包，含安装说明文档。",
-              "links": { "baidu": "#", "quark": null, "other": null },
-              "date":  "2025-04-20",
-              "hidden": true
-            }
-          ]
-        }
-      ]
     }
+
+
 
   ]
 }
