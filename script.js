@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
       renderSite(data.site);
       renderTabs(data.tabs);
       renderPanels(data.tabs);
+      renderPopup(data);
       // 默认激活第一个 Tab
       if (data.tabs.length > 0) {
         switchTab(data.tabs[0].key);
@@ -250,4 +251,109 @@ function toggleMore(btn) {
     tr.classList.toggle('revealed', !isExpanded);
   });
   btn.textContent = isExpanded ? '显示更多' : '收起更多';
+}
+
+
+/* ----------------------------------------------------------------
+   8. 弹窗（Popup）
+   从 data.popup 读取配置，自动收集最近更新的资源
+---------------------------------------------------------------- */
+function renderPopup(data) {
+  var popup = data.popup;
+  if (!popup || !popup.enabled) return;
+
+  // 今日不再显示（localStorage）
+  var today = new Date().toISOString().slice(0, 10);
+  if (localStorage.getItem('popup-hidden-date') === today) return;
+
+  // 从所有 Tab 中收集资源条目，按日期降序排列
+  var allItems = [];
+  (data.tabs || []).forEach(function (tab) {
+    // 提取中文 Tab 名（去除 emoji，如 "💿 软件" → "软件"）
+    var tabName = tab.label.replace(/[^一-龥]/g, '');
+    (tab.sections || []).forEach(function (section) {
+      (section.items || []).forEach(function (item) {
+        allItems.push({
+          name: item.name,
+          date: item.date,
+          tab:  tabName
+        });
+      });
+    });
+  });
+  allItems.sort(function (a, b) { return b.date.localeCompare(a.date); });
+
+  var count = (popup.recentUpdates && popup.recentUpdates.count) || 8;
+  var recentItems = allItems.slice(0, count);
+
+  // 构建最近更新列表 HTML
+  var recentHTML = '';
+  recentItems.forEach(function (item) {
+    recentHTML +=
+      '<li class="popup-update-item">' +
+        '<span class="popup-update-name">' + escapeHTML(item.name) + '</span>' +
+        '<span class="popup-update-meta">' +
+          '<span class="popup-update-tag">' + escapeHTML(item.tab) + '</span>' +
+          '<span class="popup-update-date">' + escapeHTML(item.date) + '</span>' +
+        '</span>' +
+      '</li>';
+  });
+  if (!recentHTML) {
+    recentHTML = '<li class="popup-update-item" style="color:var(--text-secondary)">暂无更新</li>';
+  }
+
+  var noticeTitle   = escapeHTML((popup.notice && popup.notice.title)   || '站长通知');
+  var noticeContent = (popup.notice && popup.notice.content) || '';
+  var updatesTitle  = escapeHTML((popup.recentUpdates && popup.recentUpdates.title) || '最近更新');
+
+  // 构建弹窗 DOM
+  var overlay = document.createElement('div');
+  overlay.className = 'popup-overlay';
+  overlay.innerHTML =
+    '<div class="popup-card">' +
+      '<div class="popup-header">' +
+        '<h2>' + escapeHTML(popup.title || '站点公告') + '</h2>' +
+        '<button class="popup-close" aria-label="关闭">&times;</button>' +
+      '</div>' +
+      '<div class="popup-body">' +
+        '<div class="popup-section">' +
+          '<h3>' + noticeTitle + '</h3>' +
+          '<div class="popup-notice-content">' + noticeContent + '</div>' +
+        '</div>' +
+        '<div class="popup-section">' +
+          '<h3>' + updatesTitle + '</h3>' +
+          '<ul class="popup-update-list">' + recentHTML + '</ul>' +
+        '</div>' +
+      '</div>' +
+      '<div class="popup-footer">' +
+        '<label class="popup-noshow-label"><input type="checkbox" id="popup-noshow"> 今日不再显示</label>' +
+        '<button class="popup-confirm-btn">知道了</button>' +
+      '</div>' +
+    '</div>';
+
+  document.body.appendChild(overlay);
+
+  function closePopup() {
+    var cb = document.getElementById('popup-noshow');
+    if (cb && cb.checked) {
+      localStorage.setItem('popup-hidden-date', today);
+    }
+    overlay.classList.add('closing');
+    overlay.addEventListener('animationend', function () {
+      overlay.remove();
+    });
+  }
+
+  overlay.querySelector('.popup-close').addEventListener('click', closePopup);
+  overlay.querySelector('.popup-confirm-btn').addEventListener('click', closePopup);
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closePopup();
+  });
+}
+
+/** 转义 HTML 特殊字符，防止 XSS */
+function escapeHTML(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 }
