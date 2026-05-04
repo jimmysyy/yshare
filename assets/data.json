@@ -2,7 +2,7 @@
   "_注释": {
     "说明": "修改此文件即可更新网页内容，保存后刷新页面即生效",
     "hidden字段": "true = 默认折叠（需点显示更多才可见），false 或不写 = 默认展示",
-    "links字段": "不需要的链接填 null，将显示为灰色'暂无'按钮",
+    "links字段": "不需要的链接填 null，该下载途径按钮将完全隐藏",
     "color字段": "徽章颜色可选值: blue（默认）/ green / orange / red",
     "tabs顺序": "tabs 数组的顺序决定导航栏 Tab 的排列顺序"
   },
@@ -18,11 +18,11 @@
     "title": "📢 站点公告",
     "notice": {
       "title": "📌 站长通知",
-      "content": "欢迎来到 Jimmy 的资源仓库！本站持续更新中，如有问题请联系站长。<br>解压密码统一为 <strong>jmnav.top</strong>。"
+      "content": "欢迎来到 Jimmy 的资源仓库！最近在收集整理各类资源，期待你的反馈和建议。<br>解压密码统一为 <strong>jmnav.top</strong>。"
     },
     "recentUpdates": {
       "title": "🔄 最近更新",
-      "count": 8
+      "count": 5
     }
   },
 
@@ -110,6 +110,13 @@
           "color": "orange",
           "items": [
             {
+              "name": "国漫合集",
+              "desc": "值得收藏的多部知名国漫漫画合集，包括一些小众作品。",
+              "links": { "baidu": null, "quark": null, "excel": "https://www.kdocs.cn/l/cqcwhlwxbij0" },
+              "date": "2026-05-04",
+              "hidden": false
+            },
+            {
               "name":  "知名日漫合集",
               "desc":  "值得收藏的多部知名日漫漫画合集，包括一些小众作品。",
               "links": { "baidu": "https://pan.baidu.com/s/1-FCxiPvNBSUxj60dguocuQ?pwd=5nbv", "quark": null, "other": null },
@@ -137,6 +144,19 @@
           "title": "📺 电视剧",
           "color": "blue",
           "items": [
+          ]
+        },
+        {
+          "title": "🎬 动漫",
+          "color": "green",
+          "items": [
+            {
+              "name":  "4k超清动漫合集",
+              "desc":  "值得收藏的多部知名日漫动画合集，包括一些小众作品。",
+              "links": { "baidu": null, "quark": null, "excel": "https://www.kdocs.cn/l/csXTnqgpJox6" },
+              "date":  "2026-05-04",
+              "hidden": false
+            }
           ]
         },
         {

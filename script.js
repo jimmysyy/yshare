@@ -179,6 +179,7 @@ function buildRow(item) {
   var linkDefs = [
     { url: item.links.baidu, label: '百度' },
     { url: item.links.quark, label: '夸克' },
+    { url: item.links.excel, label: '链接合集' },
     { url: item.links.other, label: '其他' },
   ];
   linkDefs.forEach(function (def) {
@@ -190,12 +191,8 @@ function buildRow(item) {
       a.rel       = 'noopener noreferrer';
       a.textContent = '🔗 ' + def.label;
       group.appendChild(a);
-    } else {
-      var span = document.createElement('span');
-      span.className   = 'link-btn disabled';
-      span.textContent = def.label + ' 暂无';
-      group.appendChild(span);
     }
+    // null 链接不渲染任何按钮，只有有链接的途径才显示
   });
   tdLinks.appendChild(group);
 
