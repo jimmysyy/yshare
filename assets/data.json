@@ -18,7 +18,7 @@
     "title": "📢 站点公告",
     "notice": {
       "title": "📌 站长通知",
-      "content": "欢迎来到 Jimmy 的资源仓库！最近在收集整理各类资源，期待你的反馈和建议。<br>解压密码统一为 <strong>jmnav.top</strong>。"
+      "content": "欢迎来到 Jimmy 的资源仓库！最近在收集整理各类资源，需要查找任何资源可以反馈留言。<br>解压密码统一为 <strong>jmnav.top</strong>。"
     },
     "recentUpdates": {
       "title": "🔄 最近更新",
@@ -60,6 +60,20 @@
               "desc":  "Adobe 2024 全系列全家桶快速安装包，含 PS、AI、PR、AE 等，支持 Win。",
               "links": { "baidu": null, "quark": "https://pan.quark.cn/s/8d52e472c46f", "other": null },
               "date":  "2026-02-20",
+              "hidden": false
+            },
+            {
+              "name":  "WPS免广告高校版合集",
+              "desc":  "WPS免广告高校版安装包，包含多个高校和企业定制版本。",
+              "links": { "baidu": null, "quark": "https://pan.quark.cn/s/02960236be57", "other": null },
+              "date":  "2026-05-01",
+              "hidden": false
+            },
+            {
+              "name":  "浏览器插件超实用合集",
+              "desc":  "屏蔽广告、网页视频图片下载、强制复制等多种实用功能的浏览器插件合集",
+              "links": { "baidu": null, "quark": "https://pan.quark.cn/s/8266f0157adc", "other": null },
+              "date":  "2026-5-05",
               "hidden": false
             }
           ]
