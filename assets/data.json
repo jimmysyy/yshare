@@ -162,6 +162,33 @@
       "label": "🎬 影视",
       "sections": [
         {
+          "title": "🎬 电影",
+          "color": "orange",
+          "items": [
+            {
+              "name":  "《挽救计划》",
+              "desc":  "挽救计划最近4K流媒体上线",
+              "links": { "baidu": "https://pan.baidu.com/s/1GFGoO6kO03jF9XQTs94mhg?pwd=jgg2", "quark": "https://pan.quark.cn/s/8dfe76eac0aa", "other": null },
+              "date":  "2026-05-01",
+              "hidden": false
+            },
+            {
+              "name":  "林正英电影合集46部",
+              "desc":  "林正英主演的46部经典电影合集，1080P高清版本，内嵌中文字幕。",
+              "links": { "baidu": null, "quark": "https://pan.quark.cn/s/a5be6bfb1061", "other": null },
+              "date":  "2025-05-30",
+              "hidden": false
+            },
+            {
+              "name":  "月光光心慌慌系列13部合集",
+              "desc":  "经典恐怖电影-月光光心慌慌（Halloween）系列13部电影合集，1080P高清版本，内嵌中文字幕。",
+              "links": { "baidu": null, "quark": "https://pan.quark.cn/s/6b38bbf19793", "other": null },
+              "date":  "2025-04-12",
+              "hidden": false
+            }
+          ]
+        },
+        {
           "title": "📺 电视剧",
           "color": "blue",
           "items": [
@@ -179,27 +206,8 @@
               "hidden": false
             }
           ]
-        },
-        {
-          "title": "🎬 电影",
-          "color": "orange",
-          "items": [
-            {
-              "name":  "林正英电影合集46部",
-              "desc":  "林正英主演的46部经典电影合集，1080P高清版本，内嵌中文字幕。",
-              "links": { "baidu": null, "quark": "https://pan.quark.cn/s/a5be6bfb1061", "other": null },
-              "date":  "2025-05-30",
-              "hidden": false
-            },
-            {
-              "name":  "月光光心慌慌系列13部合集",
-              "desc":  "经典恐怖电影-月光光心慌慌（Halloween）系列13部电影合集，1080P高清版本，内嵌中文字幕。",
-              "links": { "baidu": null, "quark": "https://pan.quark.cn/s/6b38bbf19793", "other": null },
-              "date":  "2025-04-12",
-              "hidden": false
-            }
-          ]
         }
+
       ]
     }
 
